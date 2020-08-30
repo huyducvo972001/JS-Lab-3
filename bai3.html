@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3 - Lab 3</title>
+    <script>
+        var so1 = null;
+        var so2 = null;
+        var pheptinh = null;
+        var kq = null;
+
+        function ganso(x){
+            if(so1 == null) so1 = x;
+            else so2 = x;
+            console.log("Số 1 = " + so1);
+            console.log("Số 2 = " + so2);  
+            document.getElementById('sot1').innerHTML = so1;
+            document.getElementById('dau').innerHTML = pheptinh;
+            document.getElementById('sot2').innerHTML = so2;
+            document.getElementById('kqua').innerHTML = kq;               
+        }
+
+        function ganpheptinh(x){
+            pheptinh=x;
+            console.log(x);
+            document.getElementById('sot1').innerHTML = so1;
+            document.getElementById('dau').innerHTML = pheptinh;
+            document.getElementById('sot2').innerHTML = so2;
+            document.getElementById('kqua').innerHTML = kq;
+        }
+
+        function thuc_hien(){
+            if(pheptinh == '+') kq = so1+so2;
+            if(pheptinh == '-') kq = so1-so2;
+            if(pheptinh == '*') kq = so1*so2;
+            if(pheptinh == '/') kq = so1/so2;
+            document.getElementById('sot1').innerHTML = so1;
+            document.getElementById('dau').innerHTML = pheptinh;
+            document.getElementById('sot2').innerHTML = so2;
+            document.getElementById('kqua').innerHTML = kq;
+        }
+        function lam_lai(){
+            so1 = null;
+            so2 = null;
+            pheptinh = null;
+            kq = null;
+            document.getElementById('sot1').innerHTML = "";
+            document.getElementById('dau').innerHTML = "";
+            document.getElementById('sot2').innerHTML = "";
+            document.getElementById('kqua').innerHTML = "";
+        }
+        
+    </script>
+    <style>
+        body{
+            background-color: rgb(219, 230, 230);
+        }
+        .than{
+            width: 500px;
+            margin: auto;
+            margin-top: 5px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid none;
+            background-color: white;
+            box-shadow: 5px 5px 5px gray;
+        }
+        .container{
+            width: 100%;
+            
+        }
+        button{
+            padding: 40px;
+            width: 120px;
+            font-size: 30px;
+        }
+        h2{
+            color: red;
+            letter-spacing: 1px;
+        }
+        h3{
+            color: orange;
+            letter-spacing: 1px;
+        }
+        .hienthi{
+            padding: 30px;
+            width: 120px;
+            height: 100px;
+            font-size: 30px;
+            border: 1px solid none;
+            background: rgb(70, 70, 145);
+            color: white;
+            text-align: center;
+        }
+        #num{
+            background-color: rgb(198, 191, 255);
+            border: none;
+            color: brown;
+        }
+        #pt{
+            background-color: rgb(154, 144, 231);
+            border: none;
+            color: brown;
+        }
+        #c{
+            background-color: rgb(151, 148, 172);
+            border: none;
+            color: brown; 
+        }
+    </style>
+</head>
+<body>
+    <div class="than">
+        <h2>MÁY TÍNH JAVASCRIP</h2>
+        <h3>Tác giả: Võ Đức Huy</h3>
+        <table class="container">
+            <tr>
+                <td><button id="num" onclick="ganso(7)">7</button></td>
+                <td><button id="num" onclick="ganso(8)">8</button></td>
+                <td><button id="num" onclick="ganso(9)">9</button></td>
+                <td><button id="pt" onclick="ganpheptinh('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button id="num" onclick="ganso(4)">4</button></td>
+                <td><button id="num" onclick="ganso(5)">5</button></td>
+                <td><button id="num" onclick="ganso(6)">6</button></td>
+                <td><button id="pt" onclick="ganpheptinh('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button id="num" onclick="ganso(1)">1</button></td>
+                <td><button id="num" onclick="ganso(2)">2</button></td>
+                <td><button id="num" onclick="ganso(3)">3</button></td>
+                <td><button id="pt" onclick="ganpheptinh('*')">x</button></td>
+            </tr>
+            <tr>
+                <td><button id="num" onclick="ganso(0)">0</button></td>
+                <td><button id="c" onclick="lam_lai()">C</button></td>
+                <td><button  id="c" onclick="thuc_hien()">=</button></td>
+                <td><button id="pt" onclick="ganpheptinh('/')">:</button></td>
+            </tr>             
+            <tr>
+                <td class="hienthi" id="sot1"></td>
+                <td class="hienthi" id="dau"></td>
+                <td class="hienthi" id="sot2"></td>
+                <td class="hienthi" id="kqua"></td>
+            </tr>
+           
+        </table>
+    </div>
+</body>
+</html>

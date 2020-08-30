@@ -1,0 +1,77 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4 - Lab 3</title>
+    <style>
+        body{
+            background-color: rgb(96, 92, 119);
+        }
+        .container{
+            width: 800px;
+            margin: auto;
+            margin-top: 100px;
+            border: 5px dotted white;
+            
+        }
+        td{
+            padding: 20px;
+            padding-left: 80px;
+            padding-right: 80px;
+            font-size: 30px;
+            text-align: center;
+            color: white;
+        }
+        #tg{
+            font-size: 30px;
+            width: 100px;
+            color: rgb(122, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td>Ngày</td>
+                <td>Tháng</td>
+                <td>Năm</td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="ngay" id="tg">
+                        <script>
+                            for(var ngay=1; ngay<32; ngay++) {  
+                                if(ngay==9) document.write("<option selected>"+ ngay + "</option>");   
+                                else document.write("<option>"+ ngay + "</option>");                         
+                            } 
+                        </script> 
+                    </select>
+                </td>
+                <td>
+                    <select name="thang" id="tg">
+                        <script>
+                            var thang=1;
+                            while(thang<=12) {  
+                                if(thang==7) document.write("<option selected>"+ thang + "</option>");
+                                else document.write("<option>"+ thang + "</option>");  
+                                thang++;                             
+                            } 
+                        </script>
+                </td>
+                <td>
+                    <select name="nam" id="tg">
+                        <script>
+                            var nam=1970;
+                            do{  
+                                if(nam==2001) document.write("<option selected>"+ nam + "</option>"); 
+                                else document.write("<option>"+ nam + "</option>");  
+                                nam++;                             
+                            }while(nam<=2020) 
+                        </script> 
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

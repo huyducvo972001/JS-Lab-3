@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1 - Lab 3</title>
+    <script>
+        var so1 = prompt("Nhập số 1: ");
+         so1 = Number(so1);
+        var so2 = prompt("Nhập số 2: ");
+        var pheptinh = prompt("Nhập phép tính: "); 
+         so2 = Number(so2);
+    </script>
+    <style>
+        body{
+            background-color: honeydew;
+        }
+        .container{
+            width: 800px;
+            margin: auto;
+            border: 2px solid red;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 30px;
+            color: blueviolet;
+            padding-bottom: 30px;
+            border-radius: 15px;
+            background-color: white;
+        }
+        h2{
+            color: red;
+            font-size: 40px;
+        }
+        hr{
+            width: 400px;
+            color: rgb(211, 81, 81);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>PHÉP TÍNH</h2>
+        <hr>
+        <script>
+            switch(pheptinh){
+                case '+':
+                    var kq = so1 + so2;
+                    document.write("Kết quả: " + so1 + " + " + so2 + " = " + kq );
+                    break;
+                case '-':
+                    var kq = so1 - so2;
+                    document.write("Kết quả: " + so1 + " - " + so2 + " = " + kq );
+                    break;
+                case '*':
+                    var kq = so1 * so2;
+                    document.write("Kết quả: " + so1 + " x " + so2 + " = " + kq );
+                    break;
+                case '/':
+                    var kq = so1 / so2;
+                    document.write("Kết quả: " + so1 + " / " + so2 + " = " + kq );
+                    break;
+                default:
+                    document.write(pheptinh + " không phải là phép tính hợp lệ: ");
+                    break;
+            }
+        </script>
+    </div>
+</body>
+</html>

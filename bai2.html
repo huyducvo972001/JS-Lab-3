@@ -1,0 +1,64 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2 - Lab 3</title>
+    <script>
+        var f0 = prompt("Nhập số f0: ");
+            f0 = Number(f0);
+        var f1 = prompt("Nhập số f1: ");
+            f1 = Number(f1);
+        if(isNaN(f0)==true){
+            f0 = 1;
+        }
+        if(isNaN(f1)==true){
+            f1 = 2;
+        }
+    </script>
+    <style>
+        body{
+            background-color: rgb(231, 226, 235);
+        }
+        .container{
+            width: 1100px;
+            margin: auto;
+            border: 2px solid blueviolet;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            height: 200px;
+            background-color: wheat;
+        }
+        span{
+            border: 0px solid none;
+            border-radius: 50%;
+            background-color: rgb(95, 23, 163);
+            padding: 30px;
+            margin: 0 10px;
+            margin-top: 1000px;
+            font-size: 20px;
+            color: white;
+            position: relative;
+            top: 55px;
+        }
+        h2{
+            color: rgb(109, 31, 12);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Dãy fibonacy</h2>
+        <div class="so">
+            <script>
+                for(var i=0; i<10; i++){
+                    var f = f0 + f1;
+                    f0 = f1;
+                    f1 = f;
+                    document.write("<span>" + f + "</span>");
+                }
+            </script>
+            </div>
+    </div>
+</body>
+</html>
